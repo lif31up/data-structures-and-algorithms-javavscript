@@ -20,7 +20,7 @@ class LinkedList<T> {
 		return typeof this.match !== "undefined" || typeof this.destroy !== "undefined";
 	}
 
-	private insNext(element: ILinkedListNode<T>, data: T): number {
+	public insNext(element: ILinkedListNode<T>, data: T): number {
 		if (!this.check()) return -1;
 		let newElement: ILinkedListNode<T>;
 
@@ -37,7 +37,7 @@ class LinkedList<T> {
 		this.size++;
 		return 0;
 	}
-	remNext(element: ILinkedListNode<T>): T | null {
+	public remNext(element: ILinkedListNode<T>): T | null {
 		if (!this.check()) return null;
 		let oldElement: ILinkedListNode<T>;
 
@@ -55,4 +55,12 @@ class LinkedList<T> {
 		}
 		return this.destroy(oldElement);
 	}
+
+	public getPenultimate(): ILinkedListNode<T> {
+		let penultimate: ILinkedListNode<T>;
+		for (penultimate = this.head; penultimate.next.next !== null; penultimate = penultimate.next) {
+		}
+		return penultimate;
+	}
 }
+export default LinkedList;

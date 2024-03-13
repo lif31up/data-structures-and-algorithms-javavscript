@@ -1,8 +1,8 @@
-import LinkedList from "../LinkedList/linkedList";
+import LinkedList, {ILinkedListNode} from "../LinkedList/LinkedList";
 
 class Queue<T> {
 	public list: LinkedList<T>;
-	public maxSize: number;
+	private readonly maxSize: number;
 
 	constructor(match: () => boolean, destroy: () => T | null, maxSize) {
 		this.list = new LinkedList<T>(match, destroy);
@@ -25,3 +25,5 @@ class Queue<T> {
 		return this.list.remNext(null);
 	}
 }
+
+export default Queue;
