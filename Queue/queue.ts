@@ -1,4 +1,4 @@
-import LinkedList, {ILinkedListNode} from "../LinkedList/LinkedList";
+import LinkedList, {ILinkedListNode} from "../LinkedList/linkedlist";
 
 class Queue<T> {
 	public list: LinkedList<T>;
@@ -25,5 +25,4 @@ class Queue<T> {
 		return this.list.remNext(null);
 	}
 }
-
 export default Queue;

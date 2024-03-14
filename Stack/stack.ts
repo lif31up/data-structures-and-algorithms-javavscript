@@ -1,4 +1,4 @@
-import LinkedList from "../LinkedList/LinkedList";
+import LinkedList from "../LinkedList/linkedlist";
 
 class Stack<T> {
 	public list: LinkedList<T>;
