@@ -4,7 +4,7 @@ class Stack<T> {
 	public list: LinkedList<T>;
 	private readonly maxSize: number;
 
-	constructor(match: () => boolean, destroy: () => T | null, maxLength) {
+	constructor(match: () => boolean, destroy: () => T | null, maxLength: number) {
 		this.list = new LinkedList(match, destroy);
 		this.maxSize = maxLength;
 	}
